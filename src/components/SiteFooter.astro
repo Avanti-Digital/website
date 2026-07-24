@@ -6,11 +6,11 @@ interface Props {
 		tagline: string;
 		email: string;
 		location: string;
-		copyrightYear: number;
 	};
 }
 
 const { company } = Astro.props;
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
@@ -26,7 +26,7 @@ const { company } = Astro.props;
 	</div>
 	<div class="container footer-bottom">
 		<span>{company.location}</span>
-		<span>© {company.copyrightYear} {company.legalName}</span>
+		<span>© {currentYear} {company.legalName}</span>
 		<a href="#">Back to top ↑</a>
 	</div>
 </footer>
