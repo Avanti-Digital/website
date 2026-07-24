@@ -1,0 +1,23 @@
+---
+interface Props {
+	content: {
+		eyebrow: string;
+		title: string;
+		description: string;
+	};
+	email: string;
+}
+
+const { content, email } = Astro.props;
+---
+
+<section class="final-cta" id="contact">
+	<div class="container final-cta-inner">
+		<p class="eyebrow eyebrow-light">{content.eyebrow}</p>
+		<h2>{content.title}</h2>
+		<p>{content.description}</p>
+		<a class="button button-light" href={`mailto:${email}`}>
+			{email}<span aria-hidden="true">↗</span>
+		</a>
+	</div>
+</section>

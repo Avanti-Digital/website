@@ -1,0 +1,32 @@
+---
+interface Props {
+	company: {
+		name: string;
+		legalName: string;
+		tagline: string;
+		email: string;
+		location: string;
+		copyrightYear: number;
+	};
+}
+
+const { company } = Astro.props;
+---
+
+<footer class="site-footer">
+	<div class="container footer-main">
+		<div>
+			<a class="wordmark" href="#" aria-label={`${company.name} home`}>
+				<span>{company.name}</span>
+				<span class="wordmark-mark" aria-hidden="true">↗</span>
+			</a>
+			<p>{company.tagline}</p>
+		</div>
+		<a class="footer-email" href={`mailto:${company.email}`}>{company.email}</a>
+	</div>
+	<div class="container footer-bottom">
+		<span>{company.location}</span>
+		<span>© {company.copyrightYear} {company.legalName}</span>
+		<a href="#">Back to top ↑</a>
+	</div>
+</footer>

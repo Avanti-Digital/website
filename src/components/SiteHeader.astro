@@ -1,0 +1,34 @@
+---
+interface Props {
+	company: {
+		name: string;
+	};
+	navigation: Array<{
+		label: string;
+		href: string;
+	}>;
+	cta: {
+		label: string;
+		href: string;
+	};
+}
+
+const { company, navigation, cta } = Astro.props;
+---
+
+<header class="site-header">
+	<div class="container header-inner">
+		<a class="wordmark" href="#" aria-label={`${company.name} home`}>
+			<span>{company.name}</span>
+			<span class="wordmark-mark" aria-hidden="true">↗</span>
+		</a>
+		<nav class="primary-nav" aria-label="Primary navigation">
+			{
+				navigation.map((item) => (
+					<a href={item.href}>{item.label}</a>
+				))
+			}
+		</nav>
+		<a class="button button-small button-dark header-cta" href={cta.href}>{cta.label}</a>
+	</div>
+</header>

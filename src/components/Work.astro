@@ -1,0 +1,59 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+	content: {
+		eyebrow: string;
+		title: string;
+		description: string;
+		items: Array<{
+			type: string;
+			name: string;
+			headline: string;
+			description: string;
+			tags: string[];
+			theme: string;
+		}>;
+		note: string;
+	};
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section work-section" id="work">
+	<div class="container">
+		<SectionHeading
+			eyebrow={content.eyebrow}
+			title={content.title}
+			description={content.description}
+		/>
+		<div class="work-grid">
+			{
+				content.items.map((item, index) => (
+					<article class:list={['work-card', `work-card-${item.theme}`]}>
+						<div class="work-browser">
+							<div class="work-browser-top">
+								<span>{item.type}</span>
+								<span aria-hidden="true">↗</span>
+							</div>
+							<div class="work-browser-content">
+								<p class="work-name">{item.name}</p>
+								<h3>{item.headline}</h3>
+								<span class="work-faux-button">Start a project</span>
+								<span class="work-index">0{index + 1}</span>
+							</div>
+						</div>
+						<div class="work-meta">
+							<p>{item.description}</p>
+							<ul aria-label={`${item.name} project features`}>
+								{item.tags.map((tag) => <li>{tag}</li>)}
+							</ul>
+						</div>
+					</article>
+				))
+			}
+		</div>
+		<p class="work-note">{content.note}</p>
+	</div>
+</section>

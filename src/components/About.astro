@@ -1,0 +1,38 @@
+---
+interface Props {
+	content: {
+		eyebrow: string;
+		title: string;
+		description: string;
+		callout: string;
+		audienceTitle: string;
+		audiences: string[];
+	};
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section about-section" id="about">
+	<div class="container about-grid">
+		<div class="about-copy">
+			<p class="eyebrow">{content.eyebrow}</p>
+			<h2>{content.title}</h2>
+			<p>{content.description}</p>
+			<blockquote>{content.callout}</blockquote>
+		</div>
+		<div class="audience-card">
+			<p class="audience-title">{content.audienceTitle}</p>
+			<ul>
+				{
+					content.audiences.map((audience) => (
+						<li>
+							<span>{audience}</span>
+							<span aria-hidden="true">↗</span>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</section>

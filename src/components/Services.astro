@@ -1,0 +1,40 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+	content: {
+		eyebrow: string;
+		title: string;
+		description: string;
+		items: Array<{
+			number: string;
+			title: string;
+			description: string;
+		}>;
+	};
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section services-section" id="services">
+	<div class="container">
+		<SectionHeading
+			eyebrow={content.eyebrow}
+			title={content.title}
+			description={content.description}
+		/>
+		<div class="service-list">
+			{
+				content.items.map((item) => (
+					<article class="service-card">
+						<span class="service-number">{item.number}</span>
+						<h3>{item.title}</h3>
+						<p>{item.description}</p>
+						<span class="service-arrow" aria-hidden="true">↗</span>
+					</article>
+				))
+			}
+		</div>
+	</div>
+</section>
