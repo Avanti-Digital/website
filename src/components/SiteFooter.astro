@@ -1,28 +1,38 @@
 ---
+import logoReversed from '../assets/avanti-logo-reversed.svg';
+
 interface Props {
 	company: {
 		name: string;
 		legalName: string;
 		tagline: string;
 		email: string;
+		phoneNumber: string;
 		location: string;
 	};
 }
 
 const { company } = Astro.props;
 const currentYear = new Date().getFullYear();
+const phoneDigits = company.phoneNumber.replace(/\D/g, '');
+const phoneDisplay = phoneDigits.length === 10
+	? `(${phoneDigits.slice(0, 3)}) ${phoneDigits.slice(3, 6)}-${phoneDigits.slice(6)}`
+	: company.phoneNumber;
+const phoneHref = phoneDigits.length === 10 ? `+1${phoneDigits}` : `+${phoneDigits}`;
 ---
 
 <footer class="site-footer">
 	<div class="container footer-main">
 		<div>
-			<a class="wordmark" href="#" aria-label={`${company.name} home`}>
-				<span>{company.name}</span>
-				<span class="wordmark-mark" aria-hidden="true">↗</span>
+			<a class="brand-logo-link" href="#" aria-label={`${company.name} home`}>
+				<img class="brand-logo brand-logo-footer" src={logoReversed.src} alt={company.name} />
 			</a>
 			<p>{company.tagline}</p>
 		</div>
-		<a class="footer-email" href={`mailto:${company.email}`}>{company.email}</a>
+		<div class="footer-contact-links">
+			<a class="footer-contact-link" href={`mailto:${company.email}`}>{company.email}</a>
+			<a class="footer-contact-link" href={`tel:${phoneHref}`}>{phoneDisplay}</a>
+		</div>
 	</div>
 	<div class="container footer-bottom">
 		<span>{company.location}</span>

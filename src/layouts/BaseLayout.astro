@@ -1,5 +1,12 @@
 ---
 import '../styles/global.css';
+import appleTouchIcon from '../assets/apple-touch-icon.png';
+import faviconSvg from '../assets/favicon.svg';
+import favicon16 from '../assets/favicon-16x16.png';
+import favicon32 from '../assets/favicon-32x32.png';
+import favicon48 from '../assets/favicon-48x48.png';
+import icon192 from '../assets/icon-192.png';
+import monochromeMark from '../assets/avanti-favicon-monochrome.svg';
 
 interface Props {
 	meta: {
@@ -23,6 +30,13 @@ const pageTitle = `${company.name} — ${meta.title}`;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={meta.description} />
 		<meta name="theme-color" content="#f7f5ef" />
+		<link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
+		<link rel="icon" type="image/png" sizes="16x16" href={favicon16.src} />
+		<link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
+		<link rel="icon" type="image/png" sizes="48x48" href={favicon48.src} />
+		<link rel="icon" type="image/png" sizes="192x192" href={icon192.src} />
+		<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
+		<link rel="mask-icon" href={monochromeMark.src} color="#3157e5" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={meta.description} />

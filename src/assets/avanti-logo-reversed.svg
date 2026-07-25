@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" role="img" aria-labelledby="title desc">
+  <title id="title">Avanti Digital logo</title>
+  <desc id="desc">Avanti Digital horizontal wordmark with an abstract ascending A and V mountain symbol.</desc>
+  
+  <g transform="translate(24 20) scale(.96)">
+    <path fill="#3157e5" d="M12 168 78 18h22l40 88-19 36-32-72-41 98H12Z"/>
+    <path fill="#3157e5" d="m102 111 27 47 59-101h34l-78 133h-22l-39-68 19-11Z"/>
+    <path fill="#ef6a3f" d="m194 42 31-12-13 22-25 4 7-14Z"/>
+  </g>
+  <g transform="translate(330 42)">
+    
+  <g fill="#ffffff" fill-rule="evenodd">
+    <path d="M0 100 34 0h20l34 100H68l-9-28H29l-9 28H0Zm36-46h17L44 27l-8 27Z"/>
+    <path d="M105 0h21l24 73 24-73h21l-35 100h-20L105 0Z"/>
+    <path d="M210 100 244 0h20l34 100h-20l-9-28h-30l-9 28h-20Zm36-46h17l-9-27-8 27Z"/>
+    <path d="M315 100V0h19l51 67V0h20v100h-19l-51-67v67h-20Z"/>
+    <path d="M420 0h91v19h-35v81h-21V19h-35V0Z"/>
+    <path d="M528 0h21v100h-21V0Z"/>
+  </g>
+  </g>
+  <g transform="translate(492 164) scale(.34)">
+    
+  <g fill="#ffffff" fill-rule="evenodd">
+    <path d="M0 0h34c32 0 50 18 50 50s-18 50-50 50H0V0Zm19 18v64h14c20 0 31-10 31-32S53 18 33 18H19Z"/>
+    <path d="M120 0h20v100h-20V0Z"/>
+    <path d="M261 22C252 7 238 0 221 0c-29 0-49 21-49 50s20 50 50 50c17 0 31-5 42-15V47h-43v18h24v10c-6 5-13 7-22 7-18 0-30-12-30-32s12-32 29-32c11 0 20 5 26 14l13-10Z"/>
+    <path d="M302 0h20v100h-20V0Z"/>
+    <path d="M355 0h91v19h-35v81h-21V19h-35V0Z"/>
+    <path d="M465 100 499 0h20l34 100h-20l-9-28h-30l-9 28h-20Zm36-46h17l-9-27-8 27Z"/>
+    <path d="M580 0h20v81h49v19h-69V0Z"/>
+  </g>
+  </g>
+</svg>

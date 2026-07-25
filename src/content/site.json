@@ -1,141 +1,158 @@
 {
-	"company": {
-		"name": "Avanti Digital",
-		"legalName": "Avanti Digital LLC",
-		"tagline": "Small websites, thoughtfully built.",
-		"email": "tech.avantidigital@gmail.com",
-		"location": "Working with small businesses everywhere"
-	},
-	"meta": {
-		"title": "Simple Websites for Small Businesses",
-		"description": "Clean, fast, effective websites for small businesses that need a professional online presence without the agency runaround."
-	},
-	"navigation": [
-		{ "label": "Services", "href": "#services" },
-		{ "label": "Work", "href": "#work" },
-		{ "label": "Process", "href": "#process" },
-		{ "label": "About", "href": "#about" }
-	],
-	"headerCta": {
-		"label": "Start a project",
-		"href": "#contact"
-	},
-	"hero": {
-		"eyebrow": "Independent web design · Built for small business",
-		"title": "Simple websites for",
-		"titleAccent": "serious small businesses.",
-		"description": "Clean, fast, effective websites that make your business look established online—without the oversized agency process or price tag.",
-		"primaryCta": {
-			"label": "Start a project",
-			"href": "#contact"
-		},
-		"secondaryCta": {
-			"label": "See the approach",
-			"href": "#services"
-		},
-		"proof": [
-			"2–3 focused pages",
-			"Mobile-first",
-			"Fast by default",
-			"Built one-on-one"
-		],
-		"preview": {
-			"label": "The kind of site your business actually needs",
-			"business": "Northline",
-			"title": "Good work. Done right.",
-			"button": "Request a quote",
-			"details": ["Clear services", "Real trust", "Easy contact"]
-		}
-	},
-	"services": {
-		"eyebrow": "What you get",
-		"title": "Everything your business needs online. Nothing it doesn't.",
-		"description": "A right-sized website designed around one goal: helping customers understand, trust, and contact your business.",
-		"items": [
-			{
-				"number": "01",
-				"title": "A clear, custom design",
-				"description": "A polished look shaped around your business—not a generic theme stuffed with filler."
-			},
-			{
-				"number": "02",
-				"title": "A fast, focused build",
-				"description": "A streamlined 2–3 page site that works beautifully on phones, tablets, and desktops."
-			},
-			{
-				"number": "03",
-				"title": "A confident launch",
-				"description": "The essential setup handled for you, with a site that's easy to own and ready to share."
-			}
-		]
-	},
-	"work": {
-		"eyebrow": "The approach",
-		"title": "Simple can still feel distinct.",
-		"description": "Every site gets a clear visual point of view, shaped to fit the business and the people it serves.",
-		"items": [
-			{
-				"type": "Local service",
-				"name": "Northline",
-				"headline": "Good work. Done right.",
-				"description": "A straightforward, dependable presence for a local home-service business.",
-				"tags": ["Bold", "Direct", "Trustworthy"],
-				"theme": "blue"
-			},
-			{
-				"type": "Independent professional",
-				"name": "Field & Form",
-				"headline": "Thoughtful spaces for everyday life.",
-				"description": "A warm, editorial site for a small creative practice.",
-				"tags": ["Warm", "Refined", "Personal"],
-				"theme": "orange"
-			}
-		],
-		"note": "These concept previews show the range of direction available. Replace them with completed client work as your portfolio grows."
-	},
-	"process": {
-		"eyebrow": "How it works",
-		"title": "A small, straightforward process.",
-		"description": "You work directly with the person designing and building your site from first conversation to launch.",
-		"steps": [
-			{
-				"number": "01",
-				"title": "Talk",
-				"description": "We get clear on your business, your customers, and what the website needs to accomplish."
-			},
-			{
-				"number": "02",
-				"title": "Design",
-				"description": "I turn that direction into a focused design that looks professional and sounds like you."
-			},
-			{
-				"number": "03",
-				"title": "Build",
-				"description": "The approved direction becomes a responsive, lightweight website built for real people."
-			},
-			{
-				"number": "04",
-				"title": "Launch",
-				"description": "After a final review, your new site goes live and starts working for your business."
-			}
-		]
-	},
-	"about": {
-		"eyebrow": "A smaller kind of agency",
-		"title": "No account managers. No bloated packages. Just good work.",
-		"description": "A solo web design studio for small businesses that deserve a professional online presence without paying for things they don't need. You get direct communication, honest recommendations, and a website built with care.",
-		"callout": "Your business doesn't need a complicated website. It needs a good one.",
-		"audienceTitle": "A good fit for",
-		"audiences": [
-			"Local service businesses",
-			"Independent professionals",
-			"New businesses getting established",
-			"Businesses with an outdated site"
-		]
-	},
-	"finalCta": {
-		"eyebrow": "Have a project in mind?",
-		"title": "Let's give your business a website worth sharing.",
-		"description": "Tell me a little about your business and what you need. I'll follow up with a clear next step."
-	}
+  "company": {
+    "name": "Avanti Digital",
+    "legalName": "Avanti Digital LLC",
+    "tagline": "Small websites, thoughtfully built.",
+    "email": "tech.avantidigital@gmail.com",
+    "phoneNumber": "3853231044",
+    "location": "Working with small businesses everywhere"
+  },
+  "meta": {
+    "title": "Simple Websites for Small Businesses",
+    "description": "Clean, fast, effective websites for small businesses that need a professional online presence without the agency runaround."
+  },
+  "navigation": [
+    { "label": "Services", "href": "#services" },
+    { "label": "Work", "href": "#work" },
+    { "label": "Process", "href": "#process" },
+    { "label": "About", "href": "#about" }
+  ],
+  "headerCta": {
+    "label": "Start a project",
+    "href": "#contact"
+  },
+  "hero": {
+    "title": "Simple websites for",
+    "titleAccent": "serious small businesses.",
+    "description": "Clean, fast, effective websites that make your business look established online—without the oversized agency process or price tag.",
+    "primaryCta": {
+      "label": "Start a project",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "See the approach",
+      "href": "#services"
+    },
+    "proof": [
+      "2–3 focused pages",
+      "Mobile-first",
+      "Fast by default",
+      "Built one-on-one"
+    ],
+    "preview": {
+      "business": "Northline",
+      "title": "Good work. Done right.",
+      "button": "Request a quote",
+      "details": ["Clear services", "Real trust", "Easy contact"]
+    }
+  },
+  "services": {
+    "eyebrow": "What you get",
+    "title": "Everything your business needs online. Nothing it doesn't.",
+    "description": "A right-sized website designed around one goal: helping customers understand, trust, and contact your business.",
+    "items": [
+      {
+        "number": "01",
+        "title": "A clear, custom design",
+        "description": "A polished look shaped around your business—not a generic theme stuffed with filler."
+      },
+      {
+        "number": "02",
+        "title": "A fast, focused build",
+        "description": "A streamlined 2–3 page site that works beautifully on phones, tablets, and desktops."
+      },
+      {
+        "number": "03",
+        "title": "A confident launch",
+        "description": "The essential setup handled for you, with a site that's easy to own and ready to share."
+      }
+    ]
+  },
+  "work": {
+    "eyebrow": "The approach",
+    "title": "Simple can still feel distinct.",
+    "description": "Every site gets a clear visual point of view, shaped to fit the business and the people it serves.",
+    "items": [
+      {
+        "type": "Local service",
+        "name": "Northline",
+        "headline": "Good work. Done right.",
+        "description": "A straightforward, dependable presence for a local home-service business.",
+        "tags": ["Bold", "Direct", "Trustworthy"],
+        "theme": "blue"
+      },
+      {
+        "type": "Independent professional",
+        "name": "Field & Form",
+        "headline": "Thoughtful spaces for everyday life.",
+        "description": "A warm, editorial site for a small creative practice.",
+        "tags": ["Warm", "Refined", "Personal"],
+        "theme": "orange"
+      }
+    ],
+    "note": "These concept previews show the range of direction available. Replace them with completed client work as your portfolio grows."
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "A small, straightforward process.",
+    "description": "You work directly with the person designing and building your site from first conversation to launch.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Talk",
+        "description": "We get clear on your business, your customers, and what the website needs to accomplish."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "description": "I turn that direction into a focused design that looks professional and sounds like you."
+      },
+      {
+        "number": "03",
+        "title": "Build",
+        "description": "The approved direction becomes a responsive, lightweight website built for real people."
+      },
+      {
+        "number": "04",
+        "title": "Launch",
+        "description": "After a final review, your new site goes live and starts working for your business."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Work directly with a professional software engineer",
+    "title": "No account managers. No bloated packages. Just good work.",
+    "description": "I am a professional software engineer that works with small businesses to increase their online presence without paying for things they don't need. You get direct communication, honest recommendations, and a website built with care.",
+    "callout": "Your business doesn't need a complicated website. It needs a good one.",
+    "audienceTitle": "A good fit for",
+    "audiences": [
+      "Local service businesses",
+      "Independent professionals",
+      "New businesses getting established",
+      "Businesses with an outdated site"
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Have a project in mind?",
+    "title": "Let's give your business a website worth sharing.",
+    "description": "Tell me a little about your business and what you need. I'll follow up with a clear next step.",
+    "form": {
+      "endpoint": "https://formspree.io/f/mzdnkyoa",
+      "submitLabel": "Send project note",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@business.com"
+        },
+        "note": {
+          "label": "Note",
+          "placeholder": "Tell me about your business and what you need."
+        }
+      }
+    }
+  }
 }

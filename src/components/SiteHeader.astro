@@ -1,4 +1,6 @@
 ---
+import logoColor from '../assets/avanti-logo-color.svg';
+
 interface Props {
 	company: {
 		name: string;
@@ -18,9 +20,8 @@ const { company, navigation, cta } = Astro.props;
 
 <header class="site-header">
 	<div class="container header-inner">
-		<a class="wordmark" href="#" aria-label={`${company.name} home`}>
-			<span>{company.name}</span>
-			<span class="wordmark-mark" aria-hidden="true">↗</span>
+		<a class="brand-logo-link" href="#" aria-label={`${company.name} home`}>
+			<img class="brand-logo brand-logo-header" src={logoColor.src} alt={company.name} />
 		</a>
 		<nav class="primary-nav" aria-label="Primary navigation">
 			{
@@ -29,6 +30,51 @@ const { company, navigation, cta } = Astro.props;
 				))
 			}
 		</nav>
-		<a class="button button-small button-dark header-cta" href={cta.href}>{cta.label}</a>
+		<a class="button button-primary header-cta" href={cta.href}>{cta.label}</a>
+		<details class="mobile-menu" data-mobile-menu>
+			<summary class="mobile-menu-summary">
+				<span>Menu</span>
+				<span class="menu-toggle-icon" aria-hidden="true"></span>
+			</summary>
+			<div class="mobile-menu-panel">
+				<nav class="mobile-nav" aria-label="Mobile navigation">
+					{
+						navigation.map((item) => (
+							<a href={item.href}>
+								<span>{item.label}</span>
+								<span aria-hidden="true">↗</span>
+							</a>
+						))
+					}
+				</nav>
+				<a class="button button-primary mobile-menu-cta" href={cta.href}>{cta.label}</a>
+			</div>
+		</details>
 	</div>
 </header>
+
+<script>
+	const mobileMenu = document.querySelector<HTMLDetailsElement>('[data-mobile-menu]');
+	const menuSummary = mobileMenu?.querySelector<HTMLElement>('summary');
+
+	mobileMenu?.querySelectorAll('a').forEach((link) => {
+		link.addEventListener('click', () => mobileMenu.removeAttribute('open'));
+	});
+
+	document.addEventListener('click', (event) => {
+		if (mobileMenu?.open && !mobileMenu.contains(event.target as Node)) {
+			mobileMenu.removeAttribute('open');
+		}
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape' && mobileMenu?.open) {
+			mobileMenu.removeAttribute('open');
+			menuSummary?.focus();
+		}
+	});
+
+	window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
+		if (event.matches) mobileMenu?.removeAttribute('open');
+	});
+</script>

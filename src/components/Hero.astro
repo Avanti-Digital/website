@@ -1,4 +1,6 @@
 ---
+import brandMark from '../assets/avanti-favicon-color.svg';
+
 interface Props {
 	content: {
 		eyebrow: string;
@@ -24,7 +26,6 @@ const { content } = Astro.props;
 <section class="hero" aria-labelledby="hero-title">
 	<div class="container hero-grid">
 		<div class="hero-copy">
-			<p class="eyebrow">{content.eyebrow}</p>
 			<h1 id="hero-title">
 				{content.title}
 				<span>{content.titleAccent}</span>
@@ -41,7 +42,10 @@ const { content } = Astro.props;
 		</div>
 
 		<div class="hero-preview-wrap" aria-label="Example of a clean small business website">
-			<p class="preview-label">{content.preview.label}</p>
+			<div class="preview-kicker">
+				<p class="preview-label">{content.preview.label}</p>
+				<img class="preview-brand-mark" src={brandMark.src} alt="" aria-hidden="true" />
+			</div>
 			<div class="browser-card">
 				<div class="browser-bar" aria-hidden="true">
 					<span></span><span></span><span></span>

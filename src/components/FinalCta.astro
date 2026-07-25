@@ -4,11 +4,28 @@ interface Props {
 		eyebrow: string;
 		title: string;
 		description: string;
+		form: {
+			endpoint: string;
+			submitLabel: string;
+			fields: {
+				name: {
+					label: string;
+					placeholder: string;
+				};
+				email: {
+					label: string;
+					placeholder: string;
+				};
+				note: {
+					label: string;
+					placeholder: string;
+				};
+			};
+		};
 	};
-	email: string;
 }
 
-const { content, email } = Astro.props;
+const { content } = Astro.props;
 ---
 
 <section class="final-cta" id="contact">
@@ -16,8 +33,42 @@ const { content, email } = Astro.props;
 		<p class="eyebrow eyebrow-light">{content.eyebrow}</p>
 		<h2>{content.title}</h2>
 		<p>{content.description}</p>
-		<a class="button button-light" href={`mailto:${email}`}>
-			{email}<span aria-hidden="true">↗</span>
-		</a>
+		<form class="contact-form" action={content.form.endpoint} method="POST">
+			<div class="form-field">
+				<label for="contact-name">{content.form.fields.name.label}</label>
+				<input
+					id="contact-name"
+					name="name"
+					type="text"
+					autocomplete="name"
+					placeholder={content.form.fields.name.placeholder}
+					required
+				/>
+			</div>
+			<div class="form-field">
+				<label for="contact-email">{content.form.fields.email.label}</label>
+				<input
+					id="contact-email"
+					name="email"
+					type="email"
+					autocomplete="email"
+					placeholder={content.form.fields.email.placeholder}
+					required
+				/>
+			</div>
+			<div class="form-field form-field-note">
+				<label for="contact-note">{content.form.fields.note.label}</label>
+				<textarea
+					id="contact-note"
+					name="note"
+					rows="6"
+					placeholder={content.form.fields.note.placeholder}
+					required
+				></textarea>
+			</div>
+			<button class="button button-light contact-submit" type="submit">
+				{content.form.submitLabel}<span aria-hidden="true">↗</span>
+			</button>
+		</form>
 	</div>
 </section>

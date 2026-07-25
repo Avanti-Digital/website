@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 208" role="img" aria-labelledby="title desc">
+  <title id="title">Avanti Digital monochrome mark</title>
+  <desc id="desc">Abstract ascending A and V mountain mark for Avanti Digital.</desc>
+  
+  <g transform="translate(3 3)">
+    <path fill="#181817" d="M12 168 78 18h22l40 88-19 36-32-72-41 98H12Z"/>
+    <path fill="#181817" d="m102 111 27 47 59-101h34l-78 133h-22l-39-68 19-11Z"/>
+    <path fill="#181817" d="m194 42 31-12-13 22-25 4 7-14Z"/>
+  </g>
+</svg>
