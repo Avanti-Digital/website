@@ -15,7 +15,8 @@
     { "label": "Services", "href": "#services" },
     { "label": "Work", "href": "#work" },
     { "label": "Process", "href": "#process" },
-    { "label": "About", "href": "#about" }
+    { "label": "About", "href": "#about" },
+    { "label": "Pricing", "href": "#pricing" }
   ],
   "headerCta": {
     "label": "Start a project",
@@ -131,6 +132,62 @@
       "New businesses getting established",
       "Businesses with an outdated site"
     ]
+  },
+  "pricing": {
+    "eyebrow": "Straightforward pricing",
+    "title": "One clear price to launch. One small fee to keep it live.",
+    "description": "A professional small-business website without a complicated proposal, surprise fees, or an oversized monthly retainer.",
+    "build": {
+      "label": "Website build",
+      "price": "$850",
+      "term": "one time",
+      "description": "Everything needed to design, build, and launch a focused website for your business.",
+      "includes": [
+        "Custom 2–3 page website",
+        "Mobile-friendly design",
+        "Contact form setup",
+        "Launch and domain connection"
+      ]
+    },
+    "subscription": {
+      "label": "Keep it running",
+      "price": "$25",
+      "term": "per month",
+      "description": "Simple ongoing hosting and technical care after your website launches.",
+      "includes": [
+        "Fast, reliable hosting",
+        "SSL security certificate",
+        "Routine uptime monitoring",
+        "Technical maintenance"
+      ]
+    },
+    "summary": "$850 to build your site, then $25 a month after launch.",
+    "cta": {
+      "label": "Start a project",
+      "href": "#contact"
+    },
+    "addOns": {
+      "title": "Need a little more?",
+      "description": "Optional add-ons are scoped and quoted separately based on what your business needs.",
+      "items": [
+        {
+          "title": "Additional pages",
+          "description": "Add service, location, team, or other pages beyond the standard build."
+        },
+        {
+          "title": "Copywriting support",
+          "description": "Help shaping clear, useful website copy when you do not already have it ready."
+        },
+        {
+          "title": "Booking and integrations",
+          "description": "Connect scheduling tools, email platforms, forms, or other business systems."
+        },
+        {
+          "title": "Local SEO setup",
+          "description": "Strengthen the essentials that help nearby customers find your business online."
+        }
+      ]
+    }
   },
   "finalCta": {
     "eyebrow": "Have a project in mind?",

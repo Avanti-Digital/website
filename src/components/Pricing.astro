@@ -1,0 +1,121 @@
+---
+interface Props {
+	content: {
+		eyebrow: string;
+		title: string;
+		description: string;
+		build: {
+			label: string;
+			price: string;
+			term: string;
+			description: string;
+			includes: string[];
+		};
+		subscription: {
+			label: string;
+			price: string;
+			term: string;
+			description: string;
+			includes: string[];
+		};
+		summary: string;
+		cta: {
+			label: string;
+			href: string;
+		};
+		addOns: {
+			title: string;
+			description: string;
+			items: Array<{
+				title: string;
+				description: string;
+			}>;
+		};
+	};
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section pricing-section" id="pricing">
+	<div class="container">
+		<div class="pricing-heading">
+			<p class="eyebrow">{content.eyebrow}</p>
+			<h2>{content.title}</h2>
+			<p>{content.description}</p>
+		</div>
+
+		<div class="pricing-offer">
+			<div class="pricing-plans">
+				<article class="pricing-plan">
+					<div class="pricing-plan-top">
+						<p class="pricing-label">{content.build.label}</p>
+						<p class="pricing-price">
+							<span>{content.build.price}</span>
+							<small>{content.build.term}</small>
+						</p>
+						<p class="pricing-description">{content.build.description}</p>
+					</div>
+					<ul class="pricing-includes">
+						{
+							content.build.includes.map((item) => (
+								<li>
+									<span aria-hidden="true">✓</span>
+									<span>{item}</span>
+								</li>
+							))
+						}
+					</ul>
+				</article>
+
+				<article class="pricing-plan pricing-plan-subscription">
+					<div class="pricing-plan-top">
+						<p class="pricing-label">{content.subscription.label}</p>
+						<p class="pricing-price">
+							<span>{content.subscription.price}</span>
+							<small>{content.subscription.term}</small>
+						</p>
+						<p class="pricing-description">{content.subscription.description}</p>
+					</div>
+					<ul class="pricing-includes">
+						{
+							content.subscription.includes.map((item) => (
+								<li>
+									<span aria-hidden="true">✓</span>
+									<span>{item}</span>
+								</li>
+							))
+						}
+					</ul>
+				</article>
+			</div>
+
+			<div class="pricing-summary">
+				<p>{content.summary}</p>
+				<a class="button button-primary" href={content.cta.href}>
+					{content.cta.label}<span aria-hidden="true">↗</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="add-ons">
+			<div class="add-ons-heading">
+				<h3>{content.addOns.title}</h3>
+				<p>{content.addOns.description}</p>
+			</div>
+			<ul class="add-ons-grid">
+				{
+					content.addOns.items.map((item, index) => (
+						<li>
+							<span class="add-on-number">{String(index + 1).padStart(2, '0')}</span>
+							<div>
+								<h4>{item.title}</h4>
+								<p>{item.description}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</section>
