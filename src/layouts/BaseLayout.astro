@@ -15,11 +15,78 @@ interface Props {
 	};
 	company: {
 		name: string;
+		legalName: string;
+		email: string;
+		phoneNumber: string;
+		location: string;
 	};
 }
 
 const { meta, company } = Astro.props;
 const pageTitle = `${company.name} — ${meta.title}`;
+const siteUrl = Astro.site ?? new URL(Astro.url.origin);
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const socialImageUrl = new URL('/og.png', siteUrl);
+const logoUrl = new URL(faviconSvg.src, siteUrl);
+const telephone = company.phoneNumber.replace(/\D/g, '');
+const internationalTelephone = telephone.length === 10 ? `+1${telephone}` : `+${telephone}`;
+
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'WebSite',
+			'@id': `${siteUrl.href}#website`,
+			url: siteUrl.href,
+			name: company.name,
+			description: meta.description,
+			inLanguage: 'en-US',
+			publisher: {
+				'@id': `${siteUrl.href}#organization`,
+			},
+		},
+		{
+			'@type': 'Organization',
+			'@id': `${siteUrl.href}#organization`,
+			name: company.name,
+			legalName: company.legalName,
+			url: siteUrl.href,
+			logo: logoUrl.href,
+			image: socialImageUrl.href,
+			description: meta.description,
+			email: company.email,
+			telephone: internationalTelephone,
+			areaServed: company.location,
+			contactPoint: {
+				'@type': 'ContactPoint',
+				contactType: 'customer service',
+				email: company.email,
+				telephone: internationalTelephone,
+				availableLanguage: 'English',
+			},
+			hasOfferCatalog: {
+				'@type': 'OfferCatalog',
+				name: 'Small business website services',
+				itemListElement: [
+					{
+						'@type': 'Offer',
+						name: 'Small business website build',
+						price: '850',
+						priceCurrency: 'USD',
+						description: 'A custom, mobile-friendly 2–3 page website.',
+					},
+					{
+						'@type': 'Offer',
+						name: 'Website hosting and technical care',
+						price: '25',
+						priceCurrency: 'USD',
+						description: 'Monthly hosting and technical care after launch.',
+					},
+				],
+			},
+		},
+	],
+};
 ---
 
 <!doctype html>
@@ -29,7 +96,9 @@ const pageTitle = `${company.name} — ${meta.title}`;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={meta.description} />
+		<meta name="robots" content="index, follow" />
 		<meta name="theme-color" content="#f7f5ef" />
+		<link rel="canonical" href={canonicalUrl} />
 		<link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
 		<link rel="icon" type="image/png" sizes="16x16" href={favicon16.src} />
 		<link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
@@ -38,16 +107,21 @@ const pageTitle = `${company.name} — ${meta.title}`;
 		<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
 		<link rel="mask-icon" href={monochromeMark.src} color="#3157e5" />
 		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={company.name} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={meta.description} />
-		<meta property="og:image" content="/og.png" />
+		<meta property="og:image" content={socialImageUrl} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:image:alt" content={`${company.name} — ${meta.title}`} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={pageTitle} />
 		<meta name="twitter:description" content={meta.description} />
-		<meta name="twitter:image" content="/og.png" />
+		<meta name="twitter:image" content={socialImageUrl} />
+		<meta name="twitter:image:alt" content={`${company.name} — ${meta.title}`} />
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		<title>{pageTitle}</title>
 	</head>
 	<body>
