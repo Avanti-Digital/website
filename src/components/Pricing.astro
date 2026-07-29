@@ -28,7 +28,9 @@ interface Props {
 			description: string;
 			items: Array<{
 				title: string;
+				price: string;
 				description: string;
+				pairing?: string;
 			}>;
 		};
 	};
@@ -106,11 +108,23 @@ const { content } = Astro.props;
 			<ul class="add-ons-grid">
 				{
 					content.addOns.items.map((item, index) => (
-						<li>
+						<li class:list={{ 'add-on-paired': item.pairing }}>
 							<span class="add-on-number">{String(index + 1).padStart(2, '0')}</span>
-							<div>
-								<h4>{item.title}</h4>
-								<p>{item.description}</p>
+							<div class="add-on-content">
+								<div class="add-on-header">
+									<h4>{item.title}</h4>
+									<p class="add-on-price">{item.price}</p>
+								</div>
+								<p class="add-on-description">{item.description}</p>
+								{
+									item.pairing && (
+										<p class="add-on-pairing">
+											<span>Common pairing</span>
+											<span aria-hidden="true">+</span>
+											<span>{item.pairing}</span>
+										</p>
+									)
+								}
 							</div>
 						</li>
 					))

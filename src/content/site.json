@@ -139,11 +139,11 @@
     "description": "A professional small-business website without a complicated proposal, surprise fees, or an oversized monthly retainer.",
     "build": {
       "label": "Website build",
-      "price": "$850",
+      "price": "$500",
       "term": "one time",
       "description": "Everything needed to design, build, and launch a focused website for your business.",
       "includes": [
-        "Custom 2–3 page website",
+        "Custom 3 page website",
         "Mobile-friendly design",
         "Contact form setup",
         "Launch and domain connection"
@@ -161,30 +161,41 @@
         "Technical maintenance"
       ]
     },
-    "summary": "$850 to build your site, then $25 a month after launch.",
+    "summary": "$500 to build your site, then $25 a month after launch.",
     "cta": {
       "label": "Start a project",
       "href": "#contact"
     },
     "addOns": {
       "title": "Need a little more?",
-      "description": "Optional add-ons are scoped and quoted separately based on what your business needs.",
+      "description": "",
       "items": [
         {
-          "title": "Additional pages",
-          "description": "Add service, location, team, or other pages beyond the standard build."
+          "title": "Additional page",
+          "price": "$150 per page",
+          "description": "Add a service, location, team, or other page beyond the standard website build."
         },
         {
-          "title": "Copywriting support",
-          "description": "Help shaping clear, useful website copy when you do not already have it ready."
+          "title": "Google Review integration form",
+          "price": "$200",
+          "description": "Give customers a simple, branded path to leave a review on your Google Business Profile."
         },
         {
-          "title": "Booking and integrations",
-          "description": "Connect scheduling tools, email platforms, forms, or other business systems."
+          "title": "Scheduling and calendar integration",
+          "price": "$350",
+          "description": "Connect your preferred scheduling tool so customers can book directly from your website.",
+          "pairing": "Payment processing"
         },
         {
-          "title": "Local SEO setup",
-          "description": "Strengthen the essentials that help nearby customers find your business online."
+          "title": "Payment processing",
+          "price": "$500",
+          "description": "Add a secure payment flow so customers can pay for your services online.",
+          "pairing": "Scheduling integration"
+        },
+        {
+          "title": "Custom branding or “copy cat” design",
+          "price": "$500–$1,000",
+          "description": "Create a custom brand direction or a reference-inspired design, priced according to complexity."
         }
       ]
     }
