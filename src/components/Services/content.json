@@ -1,0 +1,22 @@
+{
+  "eyebrow": "What you get",
+  "title": "Everything your business needs online. Nothing it doesn't.",
+  "description": "A right-sized website designed around one goal: helping customers understand, trust, and contact your business.",
+  "items": [
+    {
+      "number": "01",
+      "title": "A clear, custom design",
+      "description": "A polished look shaped around your business—not a generic theme stuffed with filler."
+    },
+    {
+      "number": "02",
+      "title": "A fast, focused build",
+      "description": "A streamlined 2–3 page site that works beautifully on phones, tablets, and desktops."
+    },
+    {
+      "number": "03",
+      "title": "A confident launch",
+      "description": "The essential setup handled for you, with a site that's easy to own and ready to share."
+    }
+  ]
+}

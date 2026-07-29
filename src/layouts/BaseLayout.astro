@@ -7,22 +7,9 @@ import favicon32 from '../assets/favicon-32x32.png';
 import favicon48 from '../assets/favicon-48x48.png';
 import icon192 from '../assets/icon-192.png';
 import monochromeMark from '../assets/avanti-favicon-monochrome.svg';
+import globalContent from '../content/global.json';
 
-interface Props {
-	meta: {
-		title: string;
-		description: string;
-	};
-	company: {
-		name: string;
-		legalName: string;
-		email: string;
-		phoneNumber: string;
-		location: string;
-	};
-}
-
-const { meta, company } = Astro.props;
+const { meta, company } = globalContent;
 const pageTitle = `${company.name} — ${meta.title}`;
 const siteUrl = Astro.site ?? new URL(Astro.url.origin);
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);

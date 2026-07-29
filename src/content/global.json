@@ -1,0 +1,92 @@
+{
+  "company": {
+    "name": "Avanti Digital",
+    "legalName": "Avanti Digital LLC",
+    "tagline": "Small websites, thoughtfully built.",
+    "email": "tech.avantidigital@gmail.com",
+    "phoneNumber": "3853231044",
+    "location": "Working with small businesses everywhere"
+  },
+  "meta": {
+    "title": "Simple Websites for Small Businesses",
+    "description": "Clean, fast, effective websites for small businesses that need a professional online presence without the agency runaround."
+  },
+  "navigation": [
+    { "label": "Services", "href": "#services" },
+    { "label": "Work", "href": "#work" },
+    { "label": "Process", "href": "#process" },
+    { "label": "About", "href": "#about" },
+    { "label": "Pricing", "href": "#pricing" }
+  ],
+  "headerCta": {
+    "label": "Start a project",
+    "href": "#contact"
+  },
+  "pricing": {
+    "eyebrow": "Transparent pricing",
+    "title": "One clear price to launch. One small fee to keep it live.",
+    "description": "A professional small-business website without a complicated proposal, surprise fees, or an oversized monthly retainer.",
+    "build": {
+      "label": "Website build",
+      "price": "$500",
+      "term": "one time",
+      "description": "Everything needed to design, build, and launch a focused website for your business.",
+      "includes": [
+        "Custom 3 page website",
+        "Mobile-friendly design",
+        "Contact form setup",
+        "Launch and domain connection"
+      ]
+    },
+    "subscription": {
+      "label": "Keep it running",
+      "price": "$25",
+      "term": "per month",
+      "description": "Simple ongoing hosting and technical care after your website launches.",
+      "includes": [
+        "Fast, reliable hosting",
+        "SSL security certificate",
+        "Routine uptime monitoring",
+        "Technical maintenance"
+      ]
+    },
+    "summary": "$500 to build your site, then $25 a month after launch.",
+    "cta": {
+      "label": "Start a project",
+      "href": "#contact"
+    },
+    "addOns": {
+      "title": "Need a little more?",
+      "description": "",
+      "items": [
+        {
+          "title": "Additional page",
+          "price": "$150 per page",
+          "description": "Add a service, location, team, or other page beyond the standard website build."
+        },
+        {
+          "title": "Google Review integration form",
+          "price": "$200",
+          "description": "Give customers a simple, branded path to leave a review on your Google Business Profile."
+        },
+        {
+          "title": "Scheduling and calendar integration",
+          "price": "$350",
+          "description": "Connect your preferred scheduling tool so customers can book directly from your website.",
+          "pairing": "Payment processing"
+        },
+        {
+          "title": "Payment processing",
+          "price": "$500",
+          "description": "Add a secure payment flow so customers can pay for your services online.",
+          "pairing": "Scheduling integration"
+        },
+        {
+          "title": "Custom branding or “copy cat” design",
+          "price": "$500–$1,000",
+          "description": "Create a custom brand direction or a reference-inspired design, priced according to complexity."
+        }
+      ]
+    }
+  }
+}

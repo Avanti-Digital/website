@@ -1,0 +1,243 @@
+/* Hero component */
+
+.hero {
+	overflow: hidden;
+	padding-top: clamp(4.5rem, 9vw, 8rem);
+}
+
+.hero-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+	align-items: center;
+	gap: clamp(3rem, 7vw, 7rem);
+}
+
+.hero-copy h1 {
+	max-width: 760px;
+	margin-bottom: 1.7rem;
+	font-size: clamp(3.7rem, 7.2vw, 7.2rem);
+	line-height: 0.92;
+}
+
+.hero-copy h1 span {
+	display: block;
+	color: var(--color-blue);
+}
+
+.hero-description {
+	max-width: 620px;
+	margin-bottom: 2rem;
+	color: var(--color-muted);
+	font-size: clamp(1.08rem, 1.6vw, 1.3rem);
+}
+
+.hero-preview-wrap {
+	position: relative;
+}
+
+.preview-kicker {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.preview-label {
+	margin-bottom: 0;
+	color: var(--color-muted);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.preview-brand-mark {
+	width: 2rem;
+	height: auto;
+}
+
+.browser-card {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	border: 1px solid var(--color-line);
+	border-radius: var(--radius-lg);
+	background: var(--color-white);
+	box-shadow: var(--shadow);
+	transform: rotate(1.5deg);
+	transition: transform 280ms ease;
+}
+
+.browser-card::before {
+	position: absolute;
+	inset: auto -10% -18% 25%;
+	z-index: -1;
+	height: 55%;
+	border-radius: 50%;
+	background: rgba(49, 87, 229, 0.22);
+	filter: blur(36px);
+	content: "";
+}
+
+.hero-preview-wrap:hover .browser-card {
+	transform: rotate(0deg) translateY(-4px);
+}
+
+.browser-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	height: 2.2rem;
+	padding-inline: 1rem;
+	border-bottom: 1px solid #deded9;
+	background: #f3f3f0;
+}
+
+.browser-bar span {
+	width: 0.45rem;
+	height: 0.45rem;
+	border-radius: 50%;
+	background: #c4c4bf;
+}
+
+.preview-site {
+	padding: 1.3rem;
+	background: #fbfaf6;
+}
+
+.preview-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.56rem;
+}
+
+.preview-nav strong {
+	font-size: 0.78rem;
+}
+
+.preview-body {
+	min-height: 300px;
+	padding: clamp(2.8rem, 6vw, 5rem) clamp(1.2rem, 3vw, 2.4rem);
+}
+
+.preview-body p {
+	margin-bottom: 1rem;
+	color: var(--color-blue);
+	font-size: 0.5rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}
+
+.preview-body h2 {
+	max-width: 350px;
+	margin-bottom: 1.6rem;
+	font-size: clamp(2.4rem, 4.2vw, 4rem);
+}
+
+.preview-button {
+	display: inline-block;
+	padding: 0.65rem 0.85rem;
+	border-radius: 0.25rem;
+	background: var(--color-blue);
+	color: var(--color-white);
+	font-size: 0.6rem;
+	font-weight: 700;
+}
+
+.preview-details {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border-top: 1px solid #deded9;
+}
+
+.preview-details span {
+	padding: 0.8rem 0.4rem;
+	border-right: 1px solid #deded9;
+	color: #5a5a55;
+	font-size: 0.53rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.preview-details span:last-child {
+	border-right: 0;
+}
+
+.proof-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: clamp(4rem, 8vw, 7rem);
+	border-block: 1px solid var(--color-line);
+}
+
+.proof-row span {
+	padding: 1.25rem 1rem;
+	border-right: 1px solid var(--color-line);
+	color: var(--color-muted);
+	font-size: 0.74rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.proof-row span:last-child {
+	border-right: 0;
+}
+
+@media (max-width: 900px) {
+
+	.hero-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.hero-copy {
+		max-width: 800px;
+	}
+
+	.hero-preview-wrap {
+		width: min(100%, 650px);
+		margin-left: auto;
+	}
+}
+
+@media (max-width: 680px) {
+
+	.hero-grid {
+		gap: 3.5rem;
+	}
+
+	.hero-copy h1 {
+		font-size: clamp(3.15rem, 15vw, 5rem);
+	}
+
+	.hero-preview-wrap {
+		width: 100%;
+	}
+
+	.browser-card {
+		transform: none;
+	}
+
+	.preview-body {
+		min-height: 250px;
+	}
+
+	.preview-nav span {
+		display: none;
+	}
+
+	.proof-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.proof-row span:nth-child(2) {
+		border-right: 0;
+	}
+
+	.proof-row span:nth-child(-n + 2) {
+		border-bottom: 1px solid var(--color-line);
+	}
+}

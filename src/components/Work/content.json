@@ -1,0 +1,24 @@
+{
+  "eyebrow": "The approach",
+  "title": "Simple can still feel distinct.",
+  "description": "Every site gets a clear visual point of view, shaped to fit the business and the people it serves.",
+  "items": [
+    {
+      "type": "Local service",
+      "name": "Northline",
+      "headline": "Good work. Done right.",
+      "description": "A straightforward, dependable presence for a local home-service business.",
+      "tags": ["Bold", "Direct", "Trustworthy"],
+      "theme": "blue"
+    },
+    {
+      "type": "Independent professional",
+      "name": "Field & Form",
+      "headline": "Thoughtful spaces for everyday life.",
+      "description": "A warm, editorial site for a small creative practice.",
+      "tags": ["Warm", "Refined", "Personal"],
+      "theme": "orange"
+    }
+  ],
+  "note": "These concept previews show the range of direction available. Replace them with completed client work as your portfolio grows."
+}

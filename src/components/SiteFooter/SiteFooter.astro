@@ -1,18 +1,10 @@
 ---
-import logoReversed from '../assets/avanti-logo-reversed.svg';
+import logoReversed from '../../assets/avanti-logo-reversed.svg';
+import globalContent from '../../content/global.json';
+import content from './content.json';
+import './SiteFooter.css';
 
-interface Props {
-	company: {
-		name: string;
-		legalName: string;
-		tagline: string;
-		email: string;
-		phoneNumber: string;
-		location: string;
-	};
-}
-
-const { company } = Astro.props;
+const { company } = globalContent;
 const currentYear = new Date().getFullYear();
 const phoneDigits = company.phoneNumber.replace(/\D/g, '');
 const phoneDisplay = phoneDigits.length === 10
@@ -37,6 +29,6 @@ const phoneHref = phoneDigits.length === 10 ? `+1${phoneDigits}` : `+${phoneDigi
 	<div class="container footer-bottom">
 		<span>{company.location}</span>
 		<span>© {currentYear} {company.legalName}</span>
-		<a href="#">Back to top ↑</a>
+		<a href="#">{content.backToTopLabel}</a>
 	</div>
 </footer>

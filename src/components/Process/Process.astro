@@ -1,20 +1,7 @@
 ---
-import SectionHeading from './SectionHeading.astro';
-
-interface Props {
-	content: {
-		eyebrow: string;
-		title: string;
-		description: string;
-		steps: Array<{
-			number: string;
-			title: string;
-			description: string;
-		}>;
-	};
-}
-
-const { content } = Astro.props;
+import SectionHeading from '../SectionHeading/SectionHeading.astro';
+import content from './content.json';
+import './Process.css';
 ---
 
 <section class="section process-section" id="process">

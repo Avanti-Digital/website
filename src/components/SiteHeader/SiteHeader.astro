@@ -1,21 +1,10 @@
 ---
-import logoColor from '../assets/avanti-logo-color.svg';
+import logoColor from '../../assets/avanti-logo-color.svg';
+import globalContent from '../../content/global.json';
+import content from './content.json';
+import './SiteHeader.css';
 
-interface Props {
-	company: {
-		name: string;
-	};
-	navigation: Array<{
-		label: string;
-		href: string;
-	}>;
-	cta: {
-		label: string;
-		href: string;
-	};
-}
-
-const { company, navigation, cta } = Astro.props;
+const { company, navigation, headerCta: cta } = globalContent;
 ---
 
 <header class="site-header">
@@ -23,7 +12,7 @@ const { company, navigation, cta } = Astro.props;
 		<a class="brand-logo-link" href="#" aria-label={`${company.name} home`}>
 			<img class="brand-logo brand-logo-header" src={logoColor.src} alt={company.name} />
 		</a>
-		<nav class="primary-nav" aria-label="Primary navigation">
+		<nav class="primary-nav" aria-label={content.primaryNavigationLabel}>
 			{
 				navigation.map((item) => (
 					<a href={item.href}>{item.label}</a>
@@ -33,11 +22,11 @@ const { company, navigation, cta } = Astro.props;
 		<a class="button button-primary header-cta" href={cta.href}>{cta.label}</a>
 		<details class="mobile-menu" data-mobile-menu>
 			<summary class="mobile-menu-summary">
-				<span>Menu</span>
+				<span>{content.menuLabel}</span>
 				<span class="menu-toggle-icon" aria-hidden="true"></span>
 			</summary>
 			<div class="mobile-menu-panel">
-				<nav class="mobile-nav" aria-label="Mobile navigation">
+				<nav class="mobile-nav" aria-label={content.mobileNavigationLabel}>
 					{
 						navigation.map((item) => (
 							<a href={item.href}>

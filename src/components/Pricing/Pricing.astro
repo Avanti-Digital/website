@@ -1,42 +1,9 @@
 ---
-interface Props {
-	content: {
-		eyebrow: string;
-		title: string;
-		description: string;
-		build: {
-			label: string;
-			price: string;
-			term: string;
-			description: string;
-			includes: string[];
-		};
-		subscription: {
-			label: string;
-			price: string;
-			term: string;
-			description: string;
-			includes: string[];
-		};
-		summary: string;
-		cta: {
-			label: string;
-			href: string;
-		};
-		addOns: {
-			title: string;
-			description: string;
-			items: Array<{
-				title: string;
-				price: string;
-				description: string;
-				pairing?: string;
-			}>;
-		};
-	};
-}
+import globalContent from '../../content/global.json';
+import localContent from './content.json';
+import './Pricing.css';
 
-const { content } = Astro.props;
+const content = globalContent.pricing;
 ---
 
 <section class="section pricing-section" id="pricing">
@@ -119,7 +86,7 @@ const { content } = Astro.props;
 								{
 									item.pairing && (
 										<p class="add-on-pairing">
-											<span>Common pairing</span>
+											<span>{localContent.commonPairingLabel}</span>
 											<span aria-hidden="true">+</span>
 											<span>{item.pairing}</span>
 										</p>

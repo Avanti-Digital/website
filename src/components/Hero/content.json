@@ -1,0 +1,26 @@
+{
+  "title": "Simple websites for",
+  "titleAccent": "serious small businesses.",
+  "description": "Clean, fast, effective websites that make your business look established online—without the oversized agency process or price tag.",
+  "primaryCta": {
+    "label": "Start a project",
+    "href": "#contact"
+  },
+  "secondaryCta": {
+    "label": "See the approach",
+    "href": "#services"
+  },
+  "proof": [
+    "2–3 focused pages",
+    "Mobile-first",
+    "Fast by default",
+    "Built one-on-one"
+  ],
+  "preview": {
+    "label": "",
+    "business": "Northline",
+    "title": "Good work. Done right.",
+    "button": "Request a quote",
+    "details": ["Clear services", "Real trust", "Easy contact"]
+  }
+}

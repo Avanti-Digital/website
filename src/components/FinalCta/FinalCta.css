@@ -1,0 +1,126 @@
+/* FinalCta component */
+
+.final-cta {
+	padding-block: clamp(6rem, 12vw, 11rem);
+	background: var(--color-blue);
+	color: var(--color-white);
+	text-align: center;
+}
+
+.final-cta-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.final-cta h2 {
+	max-width: 970px;
+	margin-bottom: 1.5rem;
+	font-size: clamp(3.2rem, 7vw, 7rem);
+}
+
+.final-cta p:not(.eyebrow) {
+	max-width: 620px;
+	margin-bottom: 2.5rem;
+	color: rgba(255, 255, 255, 0.72);
+	font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+}
+
+.contact-form {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	width: min(100%, 800px);
+	text-align: left;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+}
+
+.form-field-note {
+	grid-column: 1 / -1;
+}
+
+.form-field label {
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+	width: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.42);
+	border-radius: var(--radius-sm);
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--color-white);
+	font: inherit;
+	transition:
+		background-color 180ms ease,
+		border-color 180ms ease,
+		box-shadow 180ms ease;
+}
+
+.form-field input {
+	min-height: 3.6rem;
+	padding: 0.8rem 1rem;
+}
+
+.form-field textarea {
+	min-height: 10rem;
+	padding: 1rem;
+	line-height: 1.55;
+	resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+	color: rgba(255, 255, 255, 0.52);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+	border-color: var(--color-white);
+	outline: 0;
+	background: rgba(255, 255, 255, 0.16);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.16);
+}
+
+.contact-submit {
+	grid-column: 1 / -1;
+	justify-self: end;
+	border: 0;
+	cursor: pointer;
+}
+
+@media (max-width: 680px) {
+
+	.final-cta h2 {
+		font-size: clamp(3rem, 14vw, 5rem);
+	}
+
+	.contact-form {
+		grid-template-columns: 1fr;
+	}
+
+	.form-field-note,
+	.contact-submit {
+		grid-column: auto;
+	}
+
+	.contact-submit {
+		justify-self: stretch;
+	}
+
+	.footer-contact-links {
+		align-items: flex-start;
+	}
+
+	.footer-contact-link {
+		word-break: break-word;
+	}
+}

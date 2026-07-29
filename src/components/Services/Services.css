@@ -1,0 +1,68 @@
+/* Services component */
+
+.service-list {
+	border-top: 1px solid var(--color-line);
+}
+
+.service-card {
+	position: relative;
+	display: grid;
+	grid-template-columns: 0.5fr 1.2fr 1.6fr auto;
+	align-items: start;
+	gap: 2rem;
+	padding-block: 2.25rem;
+	border-bottom: 1px solid var(--color-line);
+	transition: padding 180ms ease;
+}
+
+.service-card:hover {
+	padding-inline: 1rem;
+}
+
+.service-number {
+	color: var(--color-blue);
+	font-size: 0.75rem;
+	font-weight: 700;
+}
+
+.service-card h3 {
+	margin-bottom: 0;
+	font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+.service-card p {
+	max-width: 520px;
+	margin-bottom: 0;
+	color: var(--color-muted);
+}
+
+.service-arrow {
+	font-size: 1.4rem;
+	transition:
+		color 180ms ease,
+		transform 180ms ease;
+}
+
+.service-card:hover .service-arrow {
+	color: var(--color-orange);
+	transform: translate(2px, -2px);
+}
+
+@media (max-width: 900px) {
+
+	.service-card {
+		grid-template-columns: 0.3fr 1fr 1.5fr auto;
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 680px) {
+
+	.service-card {
+		grid-template-columns: auto 1fr auto;
+	}
+
+	.service-card p {
+		grid-column: 2 / -1;
+	}
+}

@@ -1,16 +1,6 @@
 ---
-interface Props {
-	content: {
-		eyebrow: string;
-		title: string;
-		description: string;
-		callout: string;
-		audienceTitle: string;
-		audiences: string[];
-	};
-}
-
-const { content } = Astro.props;
+import content from './content.json';
+import './About.css';
 ---
 
 <section class="section about-section" id="about">

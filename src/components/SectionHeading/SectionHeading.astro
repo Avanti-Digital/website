@@ -1,11 +1,14 @@
 ---
+import content from './content.json';
+import './SectionHeading.css';
+
 interface Props {
 	eyebrow: string;
 	title: string;
 	description?: string;
 }
 
-const { eyebrow, title, description } = Astro.props;
+const { eyebrow, title, description = content.defaultDescription } = Astro.props;
 ---
 
 <div class="section-heading">

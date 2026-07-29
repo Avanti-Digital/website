@@ -1,26 +1,7 @@
 ---
-import brandMark from '../assets/avanti-favicon-color.svg';
-
-interface Props {
-	content: {
-		eyebrow: string;
-		title: string;
-		titleAccent: string;
-		description: string;
-		primaryCta: { label: string; href: string };
-		secondaryCta: { label: string; href: string };
-		proof: string[];
-		preview: {
-			label: string;
-			business: string;
-			title: string;
-			button: string;
-			details: string[];
-		};
-	};
-}
-
-const { content } = Astro.props;
+import brandMark from '../../assets/avanti-favicon-color.svg';
+import content from './content.json';
+import './Hero.css';
 ---
 
 <section class="hero" aria-labelledby="hero-title">

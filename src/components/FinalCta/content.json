@@ -1,0 +1,23 @@
+{
+  "eyebrow": "Have a project in mind?",
+  "title": "Let's give your business a website worth sharing.",
+  "description": "Tell me a little about your business and what you need. I'll follow up with a clear next step.",
+  "form": {
+    "endpoint": "https://formspree.io/f/mzdnkyoa",
+    "submitLabel": "Send project note",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@business.com"
+      },
+      "note": {
+        "label": "Note",
+        "placeholder": "Tell me about your business and what you need."
+      }
+    }
+  }
+}
