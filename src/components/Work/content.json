@@ -2,23 +2,16 @@
   "eyebrow": "The approach",
   "title": "Simple can still feel distinct.",
   "description": "Every site gets a clear visual point of view, shaped to fit the business and the people it serves.",
+  "carouselLabel": "Website project showcase",
   "items": [
     {
-      "type": "Local service",
-      "name": "Northline",
-      "headline": "Good work. Done right.",
-      "description": "A straightforward, dependable presence for a local home-service business.",
-      "tags": ["Bold", "Direct", "Trustworthy"],
-      "theme": "blue"
-    },
-    {
-      "type": "Independent professional",
-      "name": "Field & Form",
-      "headline": "Thoughtful spaces for everyday life.",
-      "description": "A warm, editorial site for a small creative practice.",
-      "tags": ["Warm", "Refined", "Personal"],
-      "theme": "orange"
+      "type": "Small business website",
+      "name": "Terra Brutal",
+      "description": "A bold, neo-brutalist landscaping site blending earthy colors, oversized typography, hard-edged borders, and playful retro character.",
+      "tags": ["Bold", "Approachable", "Direct"],
+      "video": "templateOneShowcase.mp4",
+      "videoLabel": "Template One website walkthrough",
+      "link": "https://silver-selkie-f26438.netlify.app/"
     }
-  ],
-  "note": "These concept previews show the range of direction available. Replace them with completed client work as your portfolio grows."
+  ]
 }

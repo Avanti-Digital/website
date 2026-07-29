@@ -2,6 +2,23 @@
 import SectionHeading from '../SectionHeading/SectionHeading.astro';
 import content from './content.json';
 import './Work.css';
+
+const videoAssets = import.meta.glob<string>(
+	'../../assets/showcaseWork/*.{mp4,mov,webm}',
+	{ eager: true, query: '?url', import: 'default' },
+);
+
+const slides = content.items.map((item) => {
+	const videoUrl = Object.entries(videoAssets).find(([path]) =>
+		path.endsWith(`/${item.video}`),
+	)?.[1];
+
+	if (!videoUrl) {
+		throw new Error(`Missing showcase video: ${item.video}`);
+	}
+
+	return { ...item, videoUrl };
+});
 ---
 
 <section class="section work-section" id="work">
@@ -11,32 +28,168 @@ import './Work.css';
 			title={content.title}
 			description={content.description}
 		/>
-		<div class="work-grid">
-			{
-				content.items.map((item, index) => (
-					<article class:list={['work-card', `work-card-${item.theme}`]}>
-						<div class="work-browser">
-							<div class="work-browser-top">
-								<span>{item.type}</span>
-								<span aria-hidden="true">↗</span>
-							</div>
-							<div class="work-browser-content">
-								<p class="work-name">{item.name}</p>
-								<h3>{item.headline}</h3>
-								<span class="work-faux-button">Start a project</span>
-								<span class="work-index">0{index + 1}</span>
-							</div>
-						</div>
-						<div class="work-meta">
-							<p>{item.description}</p>
-							<ul aria-label={`${item.name} project features`}>
-								{item.tags.map((tag) => <li>{tag}</li>)}
-							</ul>
-						</div>
-					</article>
-				))
-			}
+
+		<div
+			class="work-carousel"
+			data-work-carousel
+			role="region"
+			aria-roledescription="carousel"
+			aria-label={content.carouselLabel}
+		>
+			<div class="work-carousel-viewport">
+				<div class="work-carousel-track">
+					{
+						slides.map((item, index) => (
+							<article
+								class="work-slide"
+								data-work-slide
+								aria-roledescription="slide"
+								aria-label={`${index + 1} of ${slides.length}: ${item.name}`}
+								hidden={index !== 0}
+							>
+								<div class="work-browser">
+									<div class="work-browser-top">
+										<span>{item.type}</span>
+										<span>{String(index + 1).padStart(2, '0')}</span>
+									</div>
+									<video
+										class="work-video"
+										src={item.videoUrl}
+										aria-label={item.videoLabel}
+										preload={index === 0 ? 'metadata' : 'none'}
+										autoplay={index === 0}
+										muted
+										loop
+										playsinline
+										controls
+									></video>
+								</div>
+
+								<div class="work-meta">
+									<div>
+										<p class="work-type">{item.type}</p>
+										<h3>{item.name}</h3>
+										<a
+											class="work-live-link"
+											href={item.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											aria-label={`View ${item.name} live site (opens in a new tab)`}
+										>
+											View live site <span aria-hidden="true">↗</span>
+										</a>
+									</div>
+									<div class="work-details">
+										<p>{item.description}</p>
+										<ul aria-label={`${item.name} project features`}>
+											{item.tags.map((tag) => <li>{tag}</li>)}
+										</ul>
+									</div>
+								</div>
+							</article>
+						))
+					}
+				</div>
+			</div>
+
+			<div class="work-carousel-controls">
+				<div class="work-carousel-buttons">
+					<button
+						class="work-carousel-button"
+						type="button"
+						data-work-previous
+						aria-label="Show previous project"
+						disabled={slides.length < 2}
+					>
+						<span aria-hidden="true">←</span>
+					</button>
+					<button
+						class="work-carousel-button"
+						type="button"
+						data-work-next
+						aria-label="Show next project"
+						disabled={slides.length < 2}
+					>
+						<span aria-hidden="true">→</span>
+					</button>
+				</div>
+
+				<div class="work-carousel-dots" aria-label="Choose a project">
+					{
+						slides.map((item, index) => (
+							<button
+								type="button"
+								data-work-dot
+								data-index={index}
+								aria-label={`Show ${item.name}`}
+								aria-current={index === 0 ? 'true' : undefined}
+							>
+								<span></span>
+							</button>
+						))
+					}
+				</div>
+
+				<p class="work-carousel-status" data-work-status aria-live="polite">
+					01 / {String(slides.length).padStart(2, '0')}
+				</p>
+			</div>
 		</div>
-		<p class="work-note">{content.note}</p>
 	</div>
 </section>
+
+<script>
+	document.querySelectorAll<HTMLElement>('[data-work-carousel]').forEach((carousel) => {
+		const slides = Array.from(carousel.querySelectorAll<HTMLElement>('[data-work-slide]'));
+		const dots = Array.from(carousel.querySelectorAll<HTMLButtonElement>('[data-work-dot]'));
+		const previousButton = carousel.querySelector<HTMLButtonElement>('[data-work-previous]');
+		const nextButton = carousel.querySelector<HTMLButtonElement>('[data-work-next]');
+		const status = carousel.querySelector<HTMLElement>('[data-work-status]');
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		let currentIndex = 0;
+
+		const showSlide = (nextIndex: number) => {
+			if (!slides.length) return;
+			currentIndex = (nextIndex + slides.length) % slides.length;
+
+			slides.forEach((slide, index) => {
+				const isCurrent = index === currentIndex;
+				slide.hidden = !isCurrent;
+				slide.setAttribute('aria-hidden', String(!isCurrent));
+
+				const video = slide.querySelector<HTMLVideoElement>('video');
+				if (!video) return;
+				if (isCurrent && !reduceMotion) {
+					void video.play().catch(() => {});
+				} else {
+					video.pause();
+				}
+			});
+
+			dots.forEach((dot, index) => {
+				if (index === currentIndex) {
+					dot.setAttribute('aria-current', 'true');
+				} else {
+					dot.removeAttribute('aria-current');
+				}
+			});
+
+			if (status) {
+				status.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+			}
+		};
+
+		previousButton?.addEventListener('click', () => showSlide(currentIndex - 1));
+		nextButton?.addEventListener('click', () => showSlide(currentIndex + 1));
+		dots.forEach((dot) => {
+			dot.addEventListener('click', () => showSlide(Number(dot.dataset.index)));
+		});
+
+		carousel.addEventListener('keydown', (event) => {
+			if (event.key === 'ArrowLeft') showSlide(currentIndex - 1);
+			if (event.key === 'ArrowRight') showSlide(currentIndex + 1);
+		});
+
+		showSlide(0);
+	});
+</script>
