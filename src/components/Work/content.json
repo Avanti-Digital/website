@@ -6,12 +6,30 @@
   "items": [
     {
       "type": "Small business website",
+      "name": "Industrial",
+      "description": "A rugged, modern industrial style built around strong typography, structural grids, practical layouts, and restrained safety-inspired accents.",
+      "tags": ["Dependable", "Skilled", "Grounded"],
+      "video": "templateThreeShowcase.mp4",
+      "videoLabel": "Industrial website walkthrough",
+      "link": "https://majestic-capybara-d3ea60.netlify.app/"
+    },
+    {
+      "type": "Small business website",
       "name": "Terra Brutal",
       "description": "A bold, neo-brutalist landscaping site blending earthy colors, oversized typography, hard-edged borders, and playful retro character.",
       "tags": ["Bold", "Approachable", "Direct"],
       "video": "templateOneShowcase.mp4",
-      "videoLabel": "Template One website walkthrough",
+      "videoLabel": "Terra Brutal website walkthrough",
       "link": "https://silver-selkie-f26438.netlify.app/"
+    },
+    {
+      "type": "Small business website",
+      "name": "Minimalist",
+      "description": "A quiet, editorial gallery design pairing generous whitespace, oversized serif typography, and asymmetric image-led layouts.",
+      "tags": ["Curated", "Minimal", "Refined"],
+      "video": "templateTwoShowcase.mp4",
+      "videoLabel": "Minimalist website walkthrough",
+      "link": "https://spectacular-cat-52446a.netlify.app/"
     }
   ]
 }

@@ -13,7 +13,7 @@
   },
   "navigation": [
     { "label": "Services", "href": "#services" },
-    { "label": "Work", "href": "#work" },
+    { "label": "My Work", "href": "#work" },
     { "label": "Process", "href": "#process" },
     { "label": "About", "href": "#about" },
     { "label": "Pricing", "href": "#pricing" }
@@ -30,7 +30,7 @@
       "label": "Website build",
       "price": "$500",
       "term": "one time",
-      "description": "Everything needed to design, build, and launch a focused website for your business.",
+      "description": "Everything included to design, build, and launch a focused website for your business.",
       "includes": [
         "Custom 3 page website",
         "Mobile-friendly design",
@@ -46,8 +46,8 @@
       "includes": [
         "Fast, reliable hosting",
         "SSL security certificate",
-        "Routine uptime monitoring",
-        "Technical maintenance"
+        "Site functionality tests",
+        "Scoped revisions"
       ]
     },
     "summary": "$500 to build your site, then $25 a month after launch.",
@@ -65,9 +65,9 @@
           "description": "Add a service, location, team, or other page beyond the standard website build."
         },
         {
-          "title": "Google Review integration form",
+          "title": "Google Reviews integration form",
           "price": "$200",
-          "description": "Give customers a simple, branded path to leave a review on your Google Business Profile."
+          "description": "Integrate a Google Reviews widget that pulls real reviews from your business profile."
         },
         {
           "title": "Scheduling and calendar integration",

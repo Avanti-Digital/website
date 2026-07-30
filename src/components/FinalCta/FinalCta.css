@@ -1,7 +1,7 @@
 /* FinalCta component */
 
 .final-cta {
-	padding-block: clamp(6rem, 12vw, 11rem);
+	padding-block: var(--section-space);
 	background: var(--color-blue);
 	color: var(--color-white);
 	text-align: center;

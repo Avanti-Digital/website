@@ -13,7 +13,7 @@
 	--font-sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--container: 1200px;
 	--gutter: clamp(1.25rem, 4vw, 3rem);
-	--section-space: clamp(5.5rem, 10vw, 9rem);
+	--section-space: clamp(4rem, 7vw, 6.5rem);
 	--radius-sm: 0.5rem;
 	--radius-md: 1rem;
 	--radius-lg: 1.5rem;
