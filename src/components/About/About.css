@@ -19,15 +19,30 @@
 	font-size: clamp(1.05rem, 1.6vw, 1.22rem);
 }
 
-.about-copy blockquote {
+.about-research {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	align-items: center;
+	gap: clamp(1.25rem, 3vw, 2.5rem);
 	max-width: 780px;
 	margin: 3rem 0 0;
-	padding-left: 1.5rem;
+	padding: 1.5rem 0 1.5rem 1.5rem;
 	border-left: 4px solid var(--color-blue);
-	font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+	border-block: 1px solid var(--color-line);
+}
+
+.about-research strong {
+	color: var(--color-blue);
+	font-size: clamp(2.8rem, 5vw, 4.5rem);
 	font-weight: 600;
-	letter-spacing: -0.035em;
-	line-height: 1.25;
+	letter-spacing: -0.06em;
+	line-height: 0.9;
+}
+
+.about-copy .about-research p {
+	margin: 0;
+	color: var(--color-muted);
+	font-size: clamp(0.95rem, 1.3vw, 1.08rem);
 }
 
 .audience-card {
@@ -84,6 +99,10 @@
 }
 
 @media (max-width: 680px) {
+	.about-research {
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
+	}
 
 	.about-copy h2 {
 		font-size: clamp(2.7rem, 12vw, 4rem);

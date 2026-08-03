@@ -27,7 +27,7 @@
 .footer-contact-links {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: flex-start;
 	gap: 0.55rem;
 }
 
@@ -41,6 +41,51 @@
 .footer-contact-link:hover {
 	border-color: var(--color-orange);
 	color: var(--color-orange);
+}
+
+.footer-sources {
+	padding-block: 1.5rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-sources-title {
+	margin-bottom: 0.8rem;
+	color: rgba(255, 255, 255, 0.62);
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.footer-sources ol {
+	display: grid;
+	gap: 0.45rem;
+}
+
+.footer-sources li {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr) auto;
+	gap: 0.5rem;
+	scroll-margin-top: 2rem;
+	color: rgba(255, 255, 255, 0.48);
+	font-size: 0.72rem;
+	line-height: 1.45;
+}
+
+.footer-sources li > a:not(.source-back-link) {
+	width: fit-content;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.25);
+	text-underline-offset: 0.2em;
+}
+
+.footer-sources li > a:hover,
+.source-back-link:hover {
+	color: var(--color-orange);
+}
+
+.source-back-link {
+	color: rgba(255, 255, 255, 0.62);
 }
 
 .footer-bottom {
@@ -62,6 +107,14 @@
 	.footer-main,
 	.footer-bottom {
 		flex-direction: column;
+	}
+
+	.footer-sources li {
+		grid-template-columns: auto minmax(0, 1fr);
+	}
+
+	.source-back-link {
+		display: none;
 	}
 
 	.brand-logo-footer {

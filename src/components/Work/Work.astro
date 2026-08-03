@@ -36,6 +36,16 @@ const slides = content.items.map((item) => {
 			aria-roledescription="carousel"
 			aria-label={content.carouselLabel}
 		>
+			<aside class="work-research" aria-label="Research about website first impressions">
+				<strong>{content.research.number}</strong>
+				<p>
+					{content.research.description}<sup class="citation-marker"><a
+						id="citation-clutch"
+						href="#source-clutch"
+						aria-label="View source 2 for the Clutch statistic"
+					>[2]</a></sup>
+				</p>
+			</aside>
 			<div class="work-carousel-viewport">
 				<div class="work-carousel-track">
 					{
@@ -49,7 +59,6 @@ const slides = content.items.map((item) => {
 							>
 								<div class="work-browser">
 									<div class="work-browser-top">
-										<span>{item.type}</span>
 										<span>{String(index + 1).padStart(2, '0')}</span>
 									</div>
 									<video

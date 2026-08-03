@@ -2,6 +2,10 @@
   "eyebrow": "What you get",
   "title": "Everything your business needs online. Nothing it doesn't.",
   "description": "A right-sized website designed around one goal: helping customers understand, trust, and contact your business.",
+  "research": {
+    "number": "64%",
+    "description": "of UK consumers said good design is crucial in influencing whether they trust or buy from a small business."
+  },
   "items": [
     {
       "number": "01",

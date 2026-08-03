@@ -1,8 +1,11 @@
 {
   "eyebrow": "Work directly with a professional software engineer",
   "title": "No account managers. No bloated packages. Just good work.",
-  "description": "I am a professional software engineer that works with small businesses to increase their online presence without paying for things they don't need. You get direct communication, honest recommendations, and a website built with care.",
-  "callout": "Your business doesn't need a complicated website. It needs a good one.",
+  "description": "I’m a professional software engineer who works directly with small businesses. You get honest recommendations, direct communication, and a website built with care—nothing more complicated than your business needs.",
+  "research": {
+    "number": "36%",
+    "description": "In BrightLocal’s survey of more than 1,000 consumers, 36% named a business’s own website as a trusted source for researching local businesses—placing it among the top three."
+  },
   "audienceTitle": "A good fit for",
   "audiences": [
     "Local service businesses",

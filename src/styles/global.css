@@ -203,6 +203,31 @@ ol {
 	width: auto;
 }
 
+.citation-marker {
+	margin-left: 0.16em;
+	font-size: 0.65em;
+	line-height: 0;
+	vertical-align: super;
+}
+
+.citation-marker a {
+	color: currentColor;
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.12em;
+}
+
+.citation-marker a:hover {
+	color: var(--color-orange);
+}
+
+.citation-marker a:focus-visible,
+.footer-sources a:focus-visible {
+	outline: 2px solid var(--color-orange);
+	outline-offset: 3px;
+}
+
 @media (max-width: 680px) {
 	:root {
 		--gutter: 1.1rem;

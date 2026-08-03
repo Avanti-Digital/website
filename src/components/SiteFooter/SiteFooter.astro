@@ -26,6 +26,26 @@ const phoneHref = phoneDigits.length === 10 ? `+1${phoneDigits}` : `+${phoneDigi
 			<a class="footer-contact-link" href={`tel:${phoneHref}`}>{phoneDisplay}</a>
 		</div>
 	</div>
+	<div class="container footer-sources" aria-labelledby="footer-sources-title">
+		<p class="footer-sources-title" id="footer-sources-title">{content.sourcesTitle}</p>
+		<ol>
+			{
+				content.sources.map((source, index) => (
+					<li id={source.id}>
+						<span>{index + 1}.</span>
+						<a href={source.url} target="_blank" rel="noopener noreferrer">
+							{source.publisher}, “{source.title}”
+						</a>
+						<a
+							class="source-back-link"
+							href={`#${source.citationId}`}
+							aria-label={`Return to statistic ${index + 1}`}
+						>↑</a>
+					</li>
+				))
+			}
+		</ol>
+	</div>
 	<div class="container footer-bottom">
 		<span>{company.location}</span>
 		<span>© {currentYear} {company.legalName}</span>

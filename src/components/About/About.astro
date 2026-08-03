@@ -9,7 +9,16 @@ import './About.css';
 			<p class="eyebrow">{content.eyebrow}</p>
 			<h2>{content.title}</h2>
 			<p>{content.description}</p>
-			<blockquote>{content.callout}</blockquote>
+			<aside class="about-research" aria-label="Research about trusted sources for local businesses">
+				<strong>{content.research.number}</strong>
+				<p>
+					{content.research.description}<sup class="citation-marker"><a
+						id="citation-brightlocal"
+						href="#source-brightlocal"
+						aria-label="View source 3 for the BrightLocal statistic"
+					>[3]</a></sup>
+				</p>
+			</aside>
 		</div>
 		<div class="audience-card">
 			<p class="audience-title">{content.audienceTitle}</p>

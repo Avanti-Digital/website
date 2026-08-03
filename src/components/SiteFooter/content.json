@@ -1,3 +1,27 @@
 {
-  "backToTopLabel": "Back to top ↑"
+  "backToTopLabel": "Back to top ↑",
+  "sourcesTitle": "Research & Sources",
+  "sources": [
+    {
+      "id": "source-adobe",
+      "citationId": "citation-adobe",
+      "publisher": "Adobe Express",
+      "title": "The Design Index: UK Freelance Design Trends",
+      "url": "https://www.adobe.com/uk/express/learn/blog/the-design-index"
+    },
+    {
+      "id": "source-clutch",
+      "citationId": "citation-clutch",
+      "publisher": "Clutch",
+      "title": "What Trustworthy Websites Look Like in 2025",
+      "url": "https://clutch.co/resources/what-trustworthy-websites-look-like-2025"
+    },
+    {
+      "id": "source-brightlocal",
+      "citationId": "citation-brightlocal",
+      "publisher": "BrightLocal",
+      "title": "Local Business Discovery & Trust Report 2023",
+      "url": "https://www.brightlocal.com/research/local-business-discovery-trust-report/"
+    }
+  ]
 }

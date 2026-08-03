@@ -1,5 +1,29 @@
 /* Services component */
 
+.service-research {
+	display: grid;
+	grid-template-columns: minmax(7rem, 0.5fr) minmax(0, 2.8fr);
+	align-items: center;
+	gap: 2rem;
+	padding-block: clamp(1.5rem, 3vw, 2.25rem);
+	border-top: 1px solid var(--color-line);
+}
+
+.service-research strong {
+	color: var(--color-blue);
+	font-size: clamp(2.8rem, 5vw, 4.5rem);
+	font-weight: 600;
+	letter-spacing: -0.06em;
+	line-height: 0.9;
+}
+
+.service-research p {
+	max-width: 720px;
+	margin: 0;
+	color: var(--color-muted);
+	font-size: clamp(1rem, 1.4vw, 1.15rem);
+}
+
 .service-list {
 	border-top: 1px solid var(--color-line);
 }
@@ -57,6 +81,10 @@
 }
 
 @media (max-width: 680px) {
+	.service-research {
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
+	}
 
 	.service-card {
 		grid-template-columns: auto 1fr auto;

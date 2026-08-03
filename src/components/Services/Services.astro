@@ -11,6 +11,16 @@ import './Services.css';
 			title={content.title}
 			description={content.description}
 		/>
+		<aside class="service-research" aria-label="Research about design and consumer trust">
+			<strong>{content.research.number}</strong>
+			<p>
+				{content.research.description}<sup class="citation-marker"><a
+					id="citation-adobe"
+					href="#source-adobe"
+					aria-label="View source 1 for the Adobe statistic"
+				>[1]</a></sup>
+			</p>
+		</aside>
 		<div class="service-list">
 			{
 				content.items.map((item) => (
