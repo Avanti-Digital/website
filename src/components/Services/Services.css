@@ -1,12 +1,24 @@
 /* Services component */
 
+.service-research-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	border-top: 1px solid var(--color-line);
+}
+
 .service-research {
 	display: grid;
-	grid-template-columns: minmax(7rem, 0.5fr) minmax(0, 2.8fr);
+	grid-template-columns: minmax(6rem, auto) minmax(0, 1fr);
 	align-items: center;
 	gap: 2rem;
-	padding-block: clamp(1.5rem, 3vw, 2.25rem);
-	border-top: 1px solid var(--color-line);
+	padding: clamp(1.5rem, 3vw, 2.25rem);
+	padding-left: 0;
+}
+
+.service-research + .service-research {
+	padding-right: 0;
+	padding-left: clamp(1.5rem, 3vw, 2.25rem);
+	border-left: 1px solid var(--color-line);
 }
 
 .service-research strong {
@@ -73,6 +85,11 @@
 }
 
 @media (max-width: 900px) {
+	.service-research {
+		grid-template-columns: 1fr;
+		align-content: start;
+		gap: 1rem;
+	}
 
 	.service-card {
 		grid-template-columns: 0.3fr 1fr 1.5fr auto;
@@ -81,9 +98,20 @@
 }
 
 @media (max-width: 680px) {
+	.service-research-list {
+		grid-template-columns: 1fr;
+	}
+
 	.service-research {
 		grid-template-columns: 1fr;
 		gap: 0.75rem;
+		padding-inline: 0;
+	}
+
+	.service-research + .service-research {
+		padding-left: 0;
+		border-top: 1px solid var(--color-line);
+		border-left: 0;
 	}
 
 	.service-card {

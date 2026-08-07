@@ -11,16 +11,28 @@ import './Services.css';
 			title={content.title}
 			description={content.description}
 		/>
-		<aside class="service-research" aria-label="Research about design and consumer trust">
-			<strong>{content.research.number}</strong>
-			<p>
-				{content.research.description}<sup class="citation-marker"><a
-					id="citation-adobe"
-					href="#source-adobe"
-					aria-label="View source 1 for the Adobe statistic"
-				>[1]</a></sup>
-			</p>
-		</aside>
+		<div class="service-research-list">
+			<aside class="service-research" aria-label="Research about design and consumer trust">
+				<strong>{content.research.number}</strong>
+				<p>
+					{content.research.description}<sup class="citation-marker"><a
+						id="citation-adobe"
+						href="#source-adobe"
+						aria-label="View source 1 for the Adobe statistic"
+					>[1]</a></sup>
+				</p>
+			</aside>
+			<aside class="service-research" aria-label="Research about trusted sources for local businesses">
+				<strong>{content.websiteResearch.number}</strong>
+				<p>
+					{content.websiteResearch.description}<sup class="citation-marker"><a
+						id="citation-brightlocal"
+						href="#source-brightlocal"
+						aria-label="View source 3 for the BrightLocal statistic"
+					>[3]</a></sup>
+				</p>
+			</aside>
+		</div>
 		<div class="service-list">
 			{
 				content.items.map((item) => (

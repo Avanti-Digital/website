@@ -1,37 +1,40 @@
 ---
+import { Image } from 'astro:assets';
+import portrait from '../../assets/1L4A2534.jpg';
 import content from './content.json';
 import './About.css';
 ---
 
 <section class="section about-section" id="about">
 	<div class="container about-grid">
+		<div class="about-portrait">
+			<div class="about-image-frame">
+				<Image
+					class="about-image"
+					src={portrait}
+					alt="Luke Giles, the software engineer behind Avanti Digital"
+					width={720}
+					quality={90}
+					loading="lazy"
+				/>
+			</div>
+			<p class="about-photo-caption">
+				<span>Luke Giles</span>
+				<span>Owner &amp; software engineer</span>
+			</p>
+		</div>
 		<div class="about-copy">
 			<p class="eyebrow">{content.eyebrow}</p>
 			<h2>{content.title}</h2>
-			<p>{content.description}</p>
-			<aside class="about-research" aria-label="Research about trusted sources for local businesses">
-				<strong>{content.research.number}</strong>
-				<p>
-					{content.research.description}<sup class="citation-marker"><a
-						id="citation-brightlocal"
-						href="#source-brightlocal"
-						aria-label="View source 3 for the BrightLocal statistic"
-					>[3]</a></sup>
-				</p>
-			</aside>
-		</div>
-		<div class="audience-card">
-			<p class="audience-title">{content.audienceTitle}</p>
-			<ul>
-				{
-					content.audiences.map((audience) => (
-						<li>
-							<span>{audience}</span>
-							<span aria-hidden="true">↗</span>
-						</li>
-					))
-				}
-			</ul>
+			<div class="about-introduction">
+				{content.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+			</div>
+			<div class="about-fit">
+				<p class="about-fit-title">{content.audienceTitle}</p>
+				<ul>
+					{content.audiences.map((audience) => <li>{audience}</li>)}
+				</ul>
+			</div>
 		</div>
 	</div>
 </section>

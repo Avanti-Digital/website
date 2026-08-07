@@ -1,11 +1,10 @@
 {
-  "eyebrow": "Work directly with a professional software engineer",
-  "title": "No account managers. No bloated packages. Just good work.",
-  "description": "I’m a professional software engineer who works directly with small businesses. You get honest recommendations, direct communication, and a website built with care—nothing more complicated than your business needs.",
-  "research": {
-    "number": "36%",
-    "description": "In BrightLocal’s survey of more than 1,000 consumers, 36% named a business’s own website as a trusted source for researching local businesses—placing it among the top three."
-  },
+  "eyebrow": "A little about me",
+  "title": "Hi, I’m Luke 👋",
+  "paragraphs": [
+    "I’m a professional software engineer who works one-on-one with small-business owners. From our first conversation through launch, you’ll always be talking directly with the person designing and building your site.",
+    "My approach is practical and personal: listen closely, recommend only what will genuinely help, and build something polished without making the process feel complicated."
+  ],
   "audienceTitle": "A good fit for",
   "audiences": [
     "Local service businesses",
