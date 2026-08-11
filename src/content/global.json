@@ -40,7 +40,7 @@
     },
     "subscription": {
       "label": "Keep it running",
-      "price": "$25",
+      "price": "$50",
       "term": "per month",
       "description": "Simple ongoing hosting and technical care after your website launches.",
       "includes": [
@@ -50,7 +50,7 @@
         "Scoped revisions"
       ]
     },
-    "summary": "$500 to build your site, then $25 a month after launch.",
+    "summary": "$500 to build your site, then $50 a month after launch.",
     "cta": {
       "label": "Start a project",
       "href": "#contact"
