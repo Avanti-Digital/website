@@ -2,37 +2,37 @@
   "company": {
     "name": "Avanti Digital",
     "legalName": "Avanti Digital LLC",
-    "tagline": "Small websites, thoughtfully built.",
+    "tagline": "Clear websites for small businesses.",
     "email": "tech.avantidigital@gmail.com",
     "phoneNumber": "3853231044",
     "location": "Working with small businesses everywhere"
   },
   "meta": {
-    "title": "Simple Websites for Small Businesses",
-    "description": "Clean, fast, effective websites for small businesses that need a professional online presence without the agency runaround."
+    "title": "Websites for Local Service Businesses",
+    "description": "Clear, professional websites that help customers understand your services and get in touch. Built one-on-one by Avanti Digital."
   },
   "navigation": [
     { "label": "Services", "href": "#services" },
-    { "label": "My Work", "href": "#work" },
+    { "label": "Design Examples", "href": "#work" },
     { "label": "Process", "href": "#process" },
     { "label": "About", "href": "#about" },
     { "label": "Pricing", "href": "#pricing" }
   ],
   "headerCta": {
-    "label": "Start a project",
+    "label": "Get in touch",
     "href": "#contact"
   },
   "pricing": {
     "eyebrow": "Transparent pricing",
-    "title": "One clear price to launch. One small fee to keep it live.",
-    "description": "A professional small-business website without a complicated proposal, surprise fees, or an oversized monthly retainer.",
+    "title": "Know what your website will cost.",
+    "description": "A focused three-page website built for your business, with a clear monthly price for hosting and technical care after launch.",
     "build": {
       "label": "Website build",
       "price": "$500",
       "term": "one time",
-      "description": "Everything included to design, build, and launch a focused website for your business.",
+      "description": "Design, build, and launch a focused site that helps customers understand your services and reach you.",
       "includes": [
-        "Custom 3 page website",
+        "Custom three-page website",
         "Mobile-friendly design",
         "Contact form setup",
         "Launch and domain connection"
@@ -42,7 +42,7 @@
       "label": "Keep it running",
       "price": "$50",
       "term": "per month",
-      "description": "Simple ongoing hosting and technical care after your website launches.",
+      "description": "Hosting and technical care to keep the site running after launch.",
       "includes": [
         "Fast, reliable hosting",
         "SSL security certificate",
@@ -52,7 +52,7 @@
     },
     "summary": "$500 to build your site, then $50 a month after launch.",
     "cta": {
-      "label": "Start a project",
+      "label": "Tell me about your business",
       "href": "#contact"
     },
     "addOns": {
@@ -65,7 +65,7 @@
           "description": "Add a service, location, team, or other page beyond the standard website build."
         },
         {
-          "title": "Google Reviews integration form",
+          "title": "Google Reviews display",
           "price": "$200",
           "description": "Integrate a Google Reviews widget that pulls real reviews from your business profile."
         },
@@ -82,7 +82,7 @@
           "pairing": "Scheduling integration"
         },
         {
-          "title": "Custom branding or “copy cat” design",
+          "title": "Custom branding or reference-inspired design",
           "price": "$500–$1,000",
           "description": "Create a custom brand direction or a reference-inspired design, priced according to complexity."
         }

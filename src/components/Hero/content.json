@@ -1,23 +1,23 @@
 {
-  "title": "Simple websites for",
-  "titleAccent": "serious small businesses.",
-  "description": "Clean, fast, effective websites that make your business look established online—without the oversized agency process or price tag.",
+  "title": "A website that helps customers",
+  "titleAccent": "choose your business.",
+  "description": "I build clear, professional websites for local service businesses and independent professionals. Show people what you do, build confidence in your work, and make it easy to get in touch.",
   "primaryCta": {
-    "label": "Start a project",
+    "label": "Tell me about your business",
     "href": "#contact"
   },
   "secondaryCta": {
-    "label": "See the approach",
+    "label": "See what's included",
     "href": "#services"
   },
   "proof": [
     "3 focused pages",
     "Mobile-friendly",
-    "Fast by default",
+    "Clear path to contact",
     "Built one-on-one"
   ],
   "preview": {
-    "label": "",
+    "label": "Example website",
     "business": "Northline",
     "title": "Good work. Done right.",
     "button": "Request a quote",

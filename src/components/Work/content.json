@@ -1,35 +1,31 @@
 {
-  "eyebrow": "The approach",
-  "title": "Simple can still feel distinct.",
-  "description": "Every site gets a clear visual point of view, shaped to fit the business and the people it serves.",
-  "research": {
-    "number": "45%",
-    "description": "of U.S. consumers said their first impression of a company's website shapes whether they continue engaging—and they’ll leave if it seems untrustworthy."
-  },
-  "carouselLabel": "Website project showcase",
+  "eyebrow": "Design examples",
+  "title": "A site that fits the business it represents.",
+  "description": "These concept sites show how the design can change to suit different businesses and customers.",
+  "carouselLabel": "Website design examples",
   "items": [
     {
-      "type": "Small business website",
+      "type": "Industrial business concept",
       "name": "Industrial",
-      "description": "A rugged, modern industrial style built around strong typography, structural grids, practical layouts, and restrained safety-inspired accents.",
+      "description": "A concept for an industrial service business, with clear service information and a direct path to request a quote.",
       "tags": ["Dependable", "Skilled", "Grounded"],
       "video": "templateThreeShowcase.mp4",
       "videoLabel": "Industrial website walkthrough",
       "link": "https://majestic-capybara-d3ea60.netlify.app/"
     },
     {
-      "type": "Small business website",
+      "type": "Landscaping business concept",
       "name": "Terra Brutal",
-      "description": "A bold, neo-brutalist landscaping site blending earthy colors, oversized typography, hard-edged borders, and playful retro character.",
+      "description": "A concept for a landscaping business that shows its personality while making services and contact details easy to find.",
       "tags": ["Bold", "Approachable", "Direct"],
       "video": "templateOneShowcase.mp4",
       "videoLabel": "Terra Brutal website walkthrough",
       "link": "https://silver-selkie-f26438.netlify.app/"
     },
     {
-      "type": "Small business website",
+      "type": "Creative business concept",
       "name": "Minimalist",
-      "description": "A quiet, editorial gallery design pairing generous whitespace, oversized serif typography, and asymmetric image-led layouts.",
+      "description": "A concept for a creative business that puts the work first and gives interested visitors a simple way to inquire.",
       "tags": ["Curated", "Minimal", "Refined"],
       "video": "templateTwoShowcase.mp4",
       "videoLabel": "Minimalist website walkthrough",

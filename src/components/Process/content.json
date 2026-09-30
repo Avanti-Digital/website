@@ -1,27 +1,27 @@
 {
   "eyebrow": "How it works",
-  "title": "A small, straightforward process.",
-  "description": "You work directly with the person designing and building your site from first conversation to launch.",
+  "title": "A clear path from first conversation to launch.",
+  "description": "You'll work directly with me through each step, with a chance to review the site before it goes live.",
   "steps": [
     {
       "number": "01",
-      "title": "Talk",
-      "description": "We get clear on your business, your customers, and what the website needs to accomplish."
+      "title": "Tell me about your business",
+      "description": "We'll discuss your services, your customers, and what visitors should do on the site."
     },
     {
       "number": "02",
-      "title": "Design",
-      "description": "I turn that direction into a focused design that looks professional and sounds like you."
+      "title": "Review the direction",
+      "description": "I'll shape the design and wording around your business, then get your feedback before building."
     },
     {
       "number": "03",
-      "title": "Build",
-      "description": "The approved direction becomes a responsive, lightweight website."
+      "title": "See your site take shape",
+      "description": "I'll build the approved direction into a mobile-friendly website and prepare it for your review."
     },
     {
       "number": "04",
-      "title": "Launch",
-      "description": "After a final review, your new site goes live and starts working for your business."
+      "title": "Review and launch",
+      "description": "After your final review, I'll connect the domain and put your site live."
     }
   ]
 }

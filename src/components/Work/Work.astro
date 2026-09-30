@@ -36,16 +36,6 @@ const slides = content.items.map((item) => {
 			aria-roledescription="carousel"
 			aria-label={content.carouselLabel}
 		>
-			<aside class="work-research" aria-label="Research about website first impressions">
-				<strong>{content.research.number}</strong>
-				<p>
-					{content.research.description}<sup class="citation-marker"><a
-						id="citation-clutch"
-						href="#source-clutch"
-						aria-label="View source 2 for the Clutch statistic"
-					>[2]</a></sup>
-				</p>
-			</aside>
 			<div class="work-carousel-viewport">
 				<div class="work-carousel-track">
 					{
@@ -83,14 +73,14 @@ const slides = content.items.map((item) => {
 											href={item.link}
 											target="_blank"
 											rel="noopener noreferrer"
-											aria-label={`View ${item.name} live site (opens in a new tab)`}
+											aria-label={`Explore ${item.name} example (opens in a new tab)`}
 										>
-											View live site <span aria-hidden="true">↗</span>
+											Explore example <span aria-hidden="true">↗</span>
 										</a>
 									</div>
 									<div class="work-details">
 										<p>{item.description}</p>
-										<ul aria-label={`${item.name} project features`}>
+										<ul aria-label={`${item.name} concept qualities`}>
 											{item.tags.map((tag) => <li>{tag}</li>)}
 										</ul>
 									</div>

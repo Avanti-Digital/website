@@ -9,7 +9,7 @@ import icon192 from '../assets/icon-192.png';
 import monochromeMark from '../assets/avanti-favicon-monochrome.svg';
 import globalContent from '../content/global.json';
 
-const { meta, company } = globalContent;
+const { meta, company, pricing } = globalContent;
 const pageTitle = `${company.name} — ${meta.title}`;
 const siteUrl = Astro.site ?? new URL(Astro.url.origin);
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
@@ -58,14 +58,14 @@ const structuredData = {
 					{
 						'@type': 'Offer',
 						name: 'Small business website build',
-						price: '850',
+						price: pricing.build.price.replace(/[^\d.]/g, ''),
 						priceCurrency: 'USD',
-						description: 'A custom, mobile-friendly 2–3 page website.',
+						description: 'A custom, mobile-friendly three-page website.',
 					},
 					{
 						'@type': 'Offer',
 						name: 'Website hosting and technical care',
-						price: '25',
+						price: pricing.subscription.price.replace(/[^\d.]/g, ''),
 						priceCurrency: 'USD',
 						description: 'Monthly hosting and technical care after launch.',
 					},
