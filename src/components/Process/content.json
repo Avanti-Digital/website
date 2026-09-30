@@ -5,22 +5,22 @@
   "steps": [
     {
       "number": "01",
-      "title": "Tell me about your business",
+      "title": "Talk",
       "description": "We'll discuss your services, your customers, and what visitors should do on the site."
     },
     {
       "number": "02",
-      "title": "Review the direction",
+      "title": "Design",
       "description": "I'll shape the design and wording around your business, then get your feedback before building."
     },
     {
       "number": "03",
-      "title": "See your site take shape",
+      "title": "Build",
       "description": "I'll build the approved direction into a mobile-friendly website and prepare it for your review."
     },
     {
       "number": "04",
-      "title": "Review and launch",
+      "title": "Launch",
       "description": "After your final review, I'll connect the domain and put your site live."
     }
   ]

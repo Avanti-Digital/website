@@ -4,7 +4,7 @@
   "description": "Share a little about your business and your current site, if you have one. I'll reply with a practical next step.",
   "form": {
     "endpoint": "https://formspree.io/f/mzdnkyoa",
-    "submitLabel": "Send my details",
+    "submitLabel": "Send",
     "fields": {
       "name": {
         "label": "Name",
